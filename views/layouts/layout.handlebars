@@ -2,24 +2,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Welcome/login</title>
-  <link rel="stylesheet" type="text/css" href="/css/mapstyle.css">
+  <title>GeoTracker</title>
   <link rel="stylesheet" type="text/css" href="/css/semantic/dist/semantic.css">
+  <script src="css/semantic/dist/semantic.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/mapstyle.css">
 </head>
 <body>
   <header>
-    <h1>Welcome to GeoTracker<h1>
-      <nav>
+  <div class="ui borderless fixed menu">
+  <div class="ui container">
+    <div class="header item">
+    <h1><i class="marker icon"></i>GeoTracker</h1>
+    </div>
         {{#if user}}
-        <a href="/">Dashboard</a>
-        <a href="/users/logout">Logout</a>
+        <a href="/" class="item">Dashboard</a>
+        <a href="/users/logout" class="item">Logout</a>
         {{else}}
-        <a href="/users/login">Login</a>
-        <a href="/users/register">Register</a>
+        <a href="/users/login" class="item">Login</a>
+        <a href="/users/register" class="item">Register</a>
         {{/if}}
-      </nav>
+  </div>
+  </div>
   </header>
   <main>
+    <div class="">
     {{#if success_msg}}
       <p>{{success_msg}}</p>
     {{/if}}
@@ -32,7 +38,12 @@
     {{{body}}}
   </main>
   <footer>
-    <p>&copy; 2016 GeoTracker, Inc.</p>
+    <div class="ui vertical footer segment">
+      <div class="ui container">
+      <p>&copy; 2016 GeoTracker, Inc.</p>
+      </div>
+    </div>
   </footer>
+  </div>
 </body>
 </html>

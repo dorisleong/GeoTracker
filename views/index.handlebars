@@ -40,11 +40,16 @@
 
         // Inserts a message and geo coords of the user.
         // Also creates a button to send the user's info to the FBI.
-        infoWindowContents = '<h1>You have been located!</h1>' +
-          '<h2>Latitude: ' + pos.lat + '</h2>' +
-          '<h2>Longitude: ' + pos.lng + '</h2>' +
-          '<input type="textarea" id="message" placeholder="type your message"/>' +
-          '<button onclick="foo()" id="btn"/>Send FBI My Location</button>'
+        infoWindowContents = 
+          '<h1 class="ui dividing header">You have been located!</h1>' +
+          '<p><strong>Latitude: </strong>' + pos.lat + '</p>' +
+          '<p><strong>Longitude: </strong>' + pos.lng + '</p>' +
+          '<div class="ui form"' +
+          '<div class="field">' +
+          '<textarea id="message" placeholder="Type your message here">' +
+          '</textarea></div>' +
+          '<button onclick="foo()" id="btn" class="ui button"/>Send FBI My Location</button>' +
+          '</div>'
           ;
 
         infoWindow = new google.maps.InfoWindow({
